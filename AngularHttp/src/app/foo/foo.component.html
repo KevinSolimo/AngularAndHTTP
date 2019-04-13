@@ -1,0 +1,14 @@
+<button mat-raised-button color="primary" (click)="makeTypedRequest()">Make Request</button>
+
+<mat-spinner *ngIf="loading" ></mat-spinner>
+
+<pre>{{data | json}}</pre>
+
+<button mat-raised-button color="primary" (click)="makeCompactPost()">Make Post</button>
+
+<!--Uso un ciclo for per scandire tutta la lista di articoli-->
+<mat-list *ngFor="let art of fooData" >
+   <h2 mat-list-item> {{ art.title }} </h2>
+   <mat-list-item> post {{art.id}} di utente #: {{art.userId}} </mat-list-item>
+   <mat-list-item> {{art.body}} </mat-list-item>
+</mat-list>
